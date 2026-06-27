@@ -14,28 +14,8 @@ from pathlib import Path
 # Add current directory to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-# -------------------------------------------------------------------
-# HARDCODED CONFIGURATION – remove .env and config.settings dependency
-# -------------------------------------------------------------------
-API_ID = 33578855
-API_HASH = "f99e8fb11cf447b40af77f44f24cdca4"
-BOT_TOKEN = "8926690074:AAGHZ0KDAUkQIu-_sMH8Q92-4Qc5232v0oA"
-SUDO_USERS = [7969011713]
-DEFAULT_RADIO_URL = "https://ice1.somafm.com/groovesalad-128-mp3"
-
-# Also override in config.settings so other modules use these values
-import config.settings
-config.settings.API_ID = API_ID
-config.settings.API_HASH = API_HASH
-config.settings.BOT_TOKEN = BOT_TOKEN
-config.settings.SUDO_USERS = SUDO_USERS
-config.settings.DEFAULT_RADIO_URL = DEFAULT_RADIO_URL
-
-# If you need to set other variables (like TEMP_DIR, SCREENSHARE_QUALITY, etc.),
-# you can also override them here – they are already defined in settings.py with defaults.
-# -------------------------------------------------------------------
-
 from pyrogram import Client, idle
+from config.settings import API_ID, API_HASH, BOT_TOKEN
 from core.assistant import AssistantManager
 from core.bridge import AudioBridge
 from core.database import DatabaseManager
