@@ -1,4 +1,0 @@
-ffmpeg
-pulseaudio
-scrot
-python3-pip
