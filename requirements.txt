@@ -1,5 +1,5 @@
 pyrogram==2.0.106
-pytgcalls==2.1.0
+py-tgcalls
 pydub==0.25.1
 yt-dlp==2024.12.23
 sqlalchemy==2.0.36
