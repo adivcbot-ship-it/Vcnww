@@ -1,1 +1,0 @@
-worker: python validate_startup.py && python main.py
