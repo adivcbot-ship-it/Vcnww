@@ -1,0 +1,41 @@
+{
+  "name": "VCFight V2",
+  "description": "Advanced Voice Chat Bot with Screenshare for Telegram",
+  "repository": "https://github.com/yourusername/vcfight-v2",
+  "keywords": ["telegram", "voice-chat", "screenshare", "pytgcalls", "audio-bridge"],
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID from https://my.telegram.org/apps",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash from https://my.telegram.org/apps",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Bot Token from @BotFather on Telegram",
+      "required": true
+    },
+    "SUDO_USERS": {
+      "description": "User IDs who can control the bot (separate multiple with commas)",
+      "required": true
+    },
+    "DEFAULT_RADIO_URL": {
+      "description": "Default radio stream URL",
+      "required": false,
+      "value": "https://ice1.somafm.com/groovesalad-128-mp3"
+    },
+    "SCREENSHARE_QUALITY": {
+      "description": "Screenshare quality (480p, 720p, 1080p)",
+      "required": false,
+      "value": "720p"
+    }
+  },
+  "stack": "heroku-22",
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
